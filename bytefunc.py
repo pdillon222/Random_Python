@@ -39,12 +39,12 @@ progname,code_dict,maxcode=bytecodes(getprog(input("Please enter a readable path
 ###############################################_Print_Section_##########################################
 ########################################################################################################
 print("*"*20)                                                                                         ##
-print("* Unique bytecodes and counts in {}: ".format(progname))                                      ##
+print("* Unique bytecodes and counts in {}: ".format(progname))                                       ##
 print("*"*20)                                                                                         ##
 for k,v in code_dict.items():                                                                         ##
     print("{};count = {}".format(k,v))                                                                ##
 print("*"*20)                                                                                         ##
-print("* The most common bytecode is {}, its count is: {}".format(maxcode[1],maxcode[0]))           ##  
+print("* The most common bytecode is {}, its count is: {}".format(maxcode[1],maxcode[0]))             ##  
 print("*"*20)                                                                                         ##
 ########################################################################################################
 ########################################################################################################
