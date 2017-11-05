@@ -1,2 +1,4 @@
 # Random_Python
-Ongoing compilation of Python programs and scripts, for various purposes
+Compilation of Python programs and scripts for:
+-Usage examples
+-Concept introduction
