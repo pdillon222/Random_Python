@@ -1,15 +1,11 @@
 #!/usr/bin/python3
 import random,sys
 
-if len(sys.argv) != 2:
-    print("Please enter the number of data points as an argument, try again.")
-    sys.exit()
-
 def horizontal_graph(values):
     '''
     Function creates a horizontal graph through ASCII display
-    showing bar plot distribution of 40 random values in range 1:50
-    Distribution is randomized and should average near 25 
+    showing bar plot distribution of 40 random values in range 1:sys.argv[1]
+    Distribution is randomized and should average near sys.argv[1]//2 
     '''
     crnt_height = max(values)
     print("#"*(len(values)+6))
@@ -23,4 +19,9 @@ def horizontal_graph(values):
     print("   ","="*len(values),"#","\n","#"*(len(values)+5))
     print(values)
 
-horizontal_graph([random.randint(1,40) for _ in range(1,int(sys.argv[1]))])
+if __name__=="__main__":
+    if len(sys.argv) != 2:
+        points = input("Please enter an integer from 20--100 (inclusive): ")
+        horizontal_graph([random.randint(1,40) for _ in range(1,int(points))])
+    else:
+        horizontal_graph([random.randint(1,40) for _ in range(1,int(sys.argv[1]))])
